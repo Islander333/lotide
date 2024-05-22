@@ -51,7 +51,7 @@ const eqObjects = function(object1, object2) {
       return false;
     }
   }
-  //if both objects are perfect match, return true
+  //if both objects passed all tests/ are perfect match, return true
   return true;
 };
 
