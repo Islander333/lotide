@@ -25,4 +25,7 @@ const countLetters = function(sentence) {
 //test cases
 
 const result1 = countLetters("Hello");
+
+console.log(result1);
 (assertEqual(result1["l"], 2));
+assertEqual(result1["e"], 1);
