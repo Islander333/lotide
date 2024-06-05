@@ -1,6 +1,4 @@
-const eqArrays = require("./eqArrays");
 
-const assertArraysEqual = require("./assertArraysEqual");
 
 const middle = function(arr) {
   const length = arr.length;
