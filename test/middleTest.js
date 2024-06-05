@@ -15,5 +15,11 @@ describe ("#middle", () => {
   it("returns [2, 3] for [1, 2, 3, 4]", () => {
     assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
   });
+  it("returns [5, 6, 7] for [5, 6, 7] and doesn't change the original array", () => {
+    const originalArray = [5, 6, 7];
+    const result = middle(originalArray);
+    assert.deepEqual(result, [6]);
+    assert.deepEqual(originalArray, [5, 6, 7]);
+  });
 });
 
