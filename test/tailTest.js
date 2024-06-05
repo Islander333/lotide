@@ -1,13 +1,19 @@
+const assert = require('chai').assert;
 const tail = require("../tail");
-const assertEqual = require("../assertEqual");
 
-// Test Case 1: Check the returned array elements
-const OGarray = [1,2,3,4];
-const ogResult = tail(OGarray);
-assertEqual(ogResult.length, 3);
-assertEqual(OGarray.length, 4);
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+
+describe ("#tail", () => {
+  it("returns [2, 3, 4] for [1, 2, 3, 4]", () => {
+    assert.deepEqual(tail([1, 2, 3, 4]), [2, 3, 4]);
+  });
+  it("returns [5, 6, 7] for [4, 5, 6, 7]", () => {
+    assert.deepEqual(tail([4, 5, 6, 7]), [5, 6, 7]);
+  });
+  it("returns [5, 6, 7] for [5, 6, 7] not changing array after tail is called on other tests", () => {
+    assert.deepEqual(([5, 6, 7]), [5, 6, 7]);
+  });
+  it("returns ['lighthouse', 'labs'] for ['hello', 'lighthouse' 'labs']", () => {
+    assert.deepEqual(tail(['hello', 'lighthouse', 'labs']), ['lighthouse', 'labs']);
+  });
+});
