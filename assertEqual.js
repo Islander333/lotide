@@ -9,6 +9,5 @@ const assertEqual = function(actual, expected) {
 
 };
 
-//test code
-assertEqual("Lighthouse Labs", "mista white");
-assertEqual(1, 1);
+
+module.exports = assertEqual;
